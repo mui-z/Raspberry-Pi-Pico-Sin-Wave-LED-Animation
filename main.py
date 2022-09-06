@@ -1,17 +1,9 @@
 import math
-
 import time
+
 from machine import PWM, Pin
 
 pwm = PWM(Pin(25))
-
-
-def bless():
-    for i in range(65535):
-        pwm.duty_u16(i)
-
-    for i in range(65535, 0, -1):
-        pwm.duty_u16(i)
 
 
 def sin_wave():
