@@ -8,16 +8,10 @@ pwm = PWM(Pin(25))
 
 
 def sin_wave():
-    for degree in range(0, 90):
+    for degree in range(0, 360):
         seed = math.sin(math.radians(degree))
 
-        pwm.duty_u16(int(seed * 65535 * 0.8))
-        time.sleep_ms(10)
-
-    for degree in range(90, 0, -1):
-        seed = math.sin(math.radians(degree))
-
-        pwm.duty_u16(int(seed * 65535 * 0.8))
+        pwm.duty_u16(int(abs(seed * 65535 * 0.8)))
         time.sleep_ms(10)
 
 
