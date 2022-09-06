@@ -3,6 +3,7 @@ import time
 
 from machine import PWM, Pin
 
+# LED embedded on board
 pwm = PWM(Pin(25))
 
 
